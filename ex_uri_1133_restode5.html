@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+
+        body {
+            background-color: rgb(233, 226, 207);
+            color: black;
+            font: normal 15pt Arial;
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            width: 700px;
+            justify-content: center;
+        }
+
+        section {
+            border-radius: 10px;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
+            background-color: burlywood;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.397);
+        }
+    </style>
+    <header>
+        1133-Escreva um programa que leia 2 valores X e Y e que imprima todos os valores entre eles cujo resto da divisão dele por 5 for igual a 2 ou igual a 3.
+
+        Entrada
+        O arquivo de entrada contém 2 valores positivos inteiros quaisquer, não necessariamente em ordem crescente.
+
+        Saída
+        Imprima todos os valores conforme exemplo abaixo, sempre em ordem crescente.
+    </header>
+    <section>
+        <div>
+            <input type="number" id="numerox" placeholder="Digite um número" />
+            <input type="number" id="numeroy" placeholder="Digite um número" />
+            <input type="button" value="Enviar" onclick="acao()" />
+        </div>
+
+        <div id="resp">
+        </div>
+    </section>
+</body>
+
+<script>
+
+    function acao() {
+        let numerox = parseInt(document.getElementById('numerox').value);
+        let numeroy = parseInt(document.getElementById('numeroy').value);
+        let restoPor5 = 0;
+        let index = 0;
+        let resp = document.getElementById('resp');
+
+        for (index = numerox+1; index < numeroy; index++){
+            restoPor5 = index % 5;
+            if(restoPor5 == 2 || restoPor5 == 3){
+                resp.innerHTML += index + " > ";
+            }
+        }
+    }
+
+</script>
+
+</html>

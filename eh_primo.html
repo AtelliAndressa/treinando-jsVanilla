@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        table, th, td {    border: 1px solid black;   }
+        table {     border-collapse: collapse;    }
+        th, td {   padding: 5px;}
+      </style>
+    <p>
+        Um número primo é aquele número que só pode ser dividido por ele mesmo ou por UM (1) sem deixar restos;
+    </p>
+    <script>
+        tabelaHTML = "<table><tr><th colspan='50'>Números Primos entre 0 e 200<tr><td>1";
+        var primosEncontrados = 0;
+        for (dividendo = 2; dividendo <= 200; dividendo++) {
+          var ehPrimo = true;        // se sobrar resto na divisão ele acrescenta nesta variável
+          for (divisor = 2; divisor < dividendo ; divisor++) {   // o dividendo não pode dividir por ele mesmo, nem por 1
+            if (dividendo % divisor == 0) {      //se o resultado for zero ao dividir por outro numero ele nunca será primo
+              ehPrimo = false;
+              tabelaHTML += "<td>" + dividendo;    //aqui vai gerando uma tabela para inserção dos primos
+              break;
+            };
+          };
+          if (Boolean(ehPrimo)) {     //se o valor for True entra nessa clausula
+            tabelaHTML += "<td bgcolor='#00FF00'>" + dividendo;   //recebe coloração verde
+            primosEncontrados++;               // acrescenta na variavel
+          }
+          dividendo % 20 == 0 ? tabelaHTML += "<tr>" : false;  //A cada VINTE células a tabelaHTML recebe uma nova linha;
+        };
+        tabelaHTML += "</table>";
+        document.write(tabelaHTML)
+        document.write('Primos encontrados: ' + primosEncontrados+ '<br>');
+      </script>
+</body>
+</html>

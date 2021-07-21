@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    <p>Map atribui uma função para cada elemento dentro do array.
+    Por isso deve ser declarado dentro de uma nova variável ou direto no console.
+    </p>
+
+    <script>
+        const numeros = [2,3,6,5,10]; // array padrão pra todos
+
+            
+        //resolvendo com o For:
+        let novoArrayFor = [];  //precisa ser criada para o for usar, mas pro map não
+        for(let i = 0; i < numeros.length; i++){
+            novoArrayFor.push(numeros[i] * 2)   //vai jogar pra dentro no array vazio
+        }
+
+        //Usando Map para executar mesma ação de cima:
+        const novoArrayMap = numeros.map(function(numero){   //função de call back
+            return numero * 2;
+        })
+        console.log(novoArrayMap);
+
+        //Map mais enxuta com 'arrow function + retorno imediato':
+        const arrayMapEnxuta = numeros.map(numero => numero * 2);
+        console.log(arrayMapEnxuta);
+
+        //ou direto no console:
+        console.log(numeros.map(numero => numero * 2));
+
+//*************************************************************************************
+
+        //OUTRO EXEMPLO AGORA COM STRING:
+        const nomes = ['Ayrton', 'Teshima', 'Teste'];
+        const nomesMinusculos = nomes.map(function(nome){
+            return nome.toLowerCase();
+        });
+
+        //segunda forma
+        const nomesMinusculos = nomes.map(nome => nome.toLowerCase());
+        console.log(nomesMinusculos);
+
+        //terceira forma
+        console.log(nomes.map(nome => nome.toLowerCase());
+
+    </script>
+</body>
+</html>

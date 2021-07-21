@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    A turma do colégio vai fazer uma excursão na serra e todos os alunos e monitores vão tomar um bondinho para subir até o pico de uma montanha. A cabine do bondinho pode levar 50 pessoas no máximo, contando alunos e monitores, durante uma viagem até o pico.
+
+Neste problema, dado como entrada o número de alunos AA e o número de monitores MM, você deve escrever um programa que diga se é possível ou não levar todos os alunos e monitores em apenas uma viagem!
+
+Entrada
+A primeira linha da entrada contém um inteiro AA, representando a quantidade de alunos. A segunda linha da entrada contém um inteiro MM, representando o número de monitores.
+
+Saída
+Seu programa deve imprimir uma linha contendo o caractere SS se é possível levar todos os alunos e monitores em apenas uma viagem, ou o caractere NN caso não seja possível.
+
+    <div>
+        <input type="number" id="alunos" placeholder="numero alunos">
+        <input type="number" id="monitores" placeholder="numero monitores">
+        <input type="button" value="soma" onclick="soma()">
+    </div>
+    <div id="resp">
+    </div>
+<script>
+    function soma(){
+        let alunos = document.getElementById('alunos').value;
+        let monitores = document.getElementById('monitores').value;
+        let soma = alunos + monitores;
+        let resposta = document.getElementById('resp');
+
+        if (soma <= 50){
+            resposta = 'S';
+        } else {
+            resposta = 'N';
+        } 
+        resp.innerHTML = `${resposta}`;
+    }
+
+</script>
+</body>
+</html>

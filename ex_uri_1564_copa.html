@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uri 1564</title>
+</head>
+<body>
+    <style>
+
+        body {
+            background-color: rgb(233, 226, 207);
+            color: black;
+            font: normal 15pt Arial;
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            width: 700px;
+            justify-content: center;
+        }
+
+        section {
+            border-radius: 10px;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
+            background-color: burlywood;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.397);
+        }
+    </style>
+
+    <header>
+        <p>
+            O Brasil é o país sede da copa esse ano. Porém, há muitas pessoas protestando contra o governo. Em redes sociais é possível ver pessoas afirmando que não vai ter copa devido aos protestos.
+
+            Mas esses rumores de que não haverá copa são totalmente falsos, a presidente Dilma Roussef já avisou: vai ter copa sim, e se reclamar vai ter duas!
+
+            Entrada
+            A entrada contém vários casos de teste e termina com EOF. Cada caso de teste consiste de uma linha contendo o número N de reclamações sobre a copa encaminhadas para a presidente (0 ≤ N ≤ 100).
+
+            Saída
+            Para cada teste, a saída consiste de uma linha dizendo "vai ter copa!" caso não haja reclamações para a presidente. Caso haja reclamações, a saída deverá dizer "vai ter duas!".
+        </p>
+
+    </header>
+
+    <section>
+        <div>
+            <p>Você concorda em ter copa do Mundo? </p>
+            <p> Resp: 0 para concordo e 1 ou mais para não concordo</p>
+            
+            <form>
+                <input id="input" name="elementos" type="text" placeholder="1 10 9 1 0 2">
+                <input id="botao" type="button" value="enviar" onclick="processar()">
+            </form>
+        </div>
+
+        <p id="resposta"></p>
+            
+
+    </section>
+
+
+
+    <script>
+        let minhaResposta = document.getElementById("resposta");
+		
+		function processar() {
+
+            minhaResposta.innerHTML = "";
+            let input = document.getElementById("input");
+            let texto = input.value; // "1 2 10 0 2"
+            let numerosString = texto.split(" "); // ["1", "2", "10", "0", "2"]
+            let v = numerosString.map(function(x) {
+                return parseInt(x);   // transformou cada elemento em inteiro
+            }); // [1, 2, 10, 0, 2]
+
+            for(let indice = 0; indice < v.length; indice = indice + 1) {
+                if (v[indice] == 0) {
+                    minhaResposta.innerHTML = minhaResposta.innerHTML + "<p>vai ter copa</p>";
+                } else {
+                    minhaResposta.innerHTML = minhaResposta.innerHTML + "<p>vai ter duas</p>";
+                }
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>

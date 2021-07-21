@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for dentro for</title>
+</head>
+<body>
+    <script>
+
+        for(let i = 1; i <= 5; i++){       // corre de 1 a 5
+            for(let j = 1; j<= 5; j++){    // corre de 1 a 5 dentro de cada elemento do for acima
+                console.log(`i: ${i}; j: ${j}`); 
+            }
+        }
+        /* vai imprimir:
+        i: 1; j:1
+        i: 1; j:2
+        i: 1; j:3
+        i: 1; j:4   e assim em diante pra cada numero até o i:5 e o j percorrer todo o 5 */
+
+           
+        // imprimindo os impares dentro do for
+        for(let i = 1; i <= 5; i++){       // corre de 1 a 5
+            for(let j = 1; j<= 5; j++){    // corre de 1 a 5 dentro de cada elemento do for acima
+                if (j%2 == 0){      // toda vez que o numero for par ele vai pular ele
+                    continue;         // vai continuar pro proximo para imprimir (impares)
+                }
+                console.log(`i: ${i}; j: ${j}`); 
+            }
+        }
+    </script>
+</body>
+</html>

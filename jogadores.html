@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+    let jogadoresBrasileiros = ["Pelé","Ronaldinho Gaúcho","Ronaldo Fenômeno"];
+let jogadoresFranceses	 = ["Zidane","Henry","Bartez"];
+
+//array.forEach(function(currentValue, index, arr), thisValue)
+
+jogadoresBrasileiros.forEach(torcidaOrganizada);
+jogadoresFranceses.forEach(torcidaOrganizada);
+</p>
+<script>
+
+function torcidaOrganizada(valor,index,arr){
+	console.log(arr);
+  console.log("Index:" + index);
+  console.log("Valor:" + valor);
+	arr[index] += " Brasil sil sil";
+	console.log(index + " Vai " +valor+ "!!");
+}
+
+</script>
+</body>
+</html>

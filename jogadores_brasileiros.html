@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<script>
+
+let jogadoresBrasileiros = ["Pelé","Ronaldinho Gaúcho","Ronaldo Fenômeno"];
+
+let jogadoresAtualizado = jogadoresBrasileiros.map(torcidaOrganizada);
+
+function torcidaOrganizada(valor,index,arr){
+	//console.log(arr);
+  //console.log("Index:" + index);
+  //console.log("Valor:" + valor);
+  arr[index] += " Brasil sil sil";
+	//valor += " Brasil sil sil";
+	//console.log(index + " Vai " +valor+ "!!");
+  return valor;
+}
+
+console.log(jogadoresBrasileiros);
+console.log(jogadoresAtualizado);
+
+
+
+//Outra forma de resolver usando forEach:
+
+let jogadoresBrasileiros = ["Pelé","Ronaldinho Gaúcho","Ronaldo Fenômeno"];
+let jogadoresFranceses	 = ["Zidane","Henry","Bartez"];
+
+//array.forEach(function(currentValue, index, arr), thisValue)
+
+jogadoresBrasileiros.forEach(torcidaOrganizada);
+jogadoresFranceses.forEach(torcidaOrganizada);
+
+
+function torcidaOrganizada(valor,index,arr){
+	console.log(arr);
+  console.log("Index:" + index);
+  console.log("Valor:" + valor);
+	arr[index] += " Brasil sil sil";
+	console.log(index + " Vai " +valor+ "!!");
+}
+
+
+</script>
+</body>
+</html>

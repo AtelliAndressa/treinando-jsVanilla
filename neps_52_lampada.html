@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>neps 52</title>
+</head>
+<body>
+        <p> Ao apertar interruptor 1, a lâmpada AA acende se estiver apagada, e apaga se estiver acesa. Se apertar interruptor 2, cada uma das lâmpadas AA e a BB troca de estado: se estiver apagada, fica acesa e se estiver acesa apaga.
+        As lâmpadas inicialmente estão ambas apagadas. Seu amigo resolveu bolar um desafio para você. Ele irá apertar os interruptores em uma certa sequência, e gostaria que você respondesse o estado final das lâmpadas AA e BB.
+        Entrada
+        A primeira linha contém um número NN que representa quantas vezes seu amigo irá apertar algum interruptor. Na linha seguinte seguirão N números, que pode ser 1 se o interruptor ​1 foi apertado, ou 2, se o interruptor ​2 foi apertado.
+        Saída
+        Seu programa deve imprimir dois valores, em linhas separadas. Na primeira linha, imprima 1 se a lâmpada AA estiver acesa no final das operações e 0 caso contrário. Na segunda linha, imprima 1 se a lâmpada BB estiver acesa no final das operações e 0 caso contrário. </p>
+        <div>
+        <input type="button" value="Enviar" id="aperta" onclick="apertar()">
+        </div>
+        <div id="resplampadaA">
+        </div>
+        <div id="resplampadaB">
+        </div>
+
+<script>
+    
+    function apertar(){
+        let vetor = [{
+            numvez: 3, 
+            interruptor: [1,2,2]
+        }];
+        let lampadaA;
+        let lampadaB;
+        let num;
+        let resplampadaA = document.getElementById('resplampadaA');
+  
+       function trocaLampada(lampada){
+           return ((lampada == 1) ? 0:1);
+       }
+
+       for (num = 0; num < vetor[0].numvez; num++){
+           let interruptor = vetor[0].interruptor[num];
+           if (interruptor == 1) {
+                lampadaA = trocaLampada(lampadaA);
+           } else {
+               lampadaA = trocaLampada(lampadaA);
+               lampadaB = trocaLampada(lampadaB);
+           }
+       }
+        document.getElementById("resplampadaA").innerHTML = lampadaA;
+        document.getElementById("resplampadaB").innerHTML = lampadaB;
+    }
+
+</script>
+</body>
+</html>

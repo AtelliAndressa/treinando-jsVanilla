@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        60 segundos x 60 minutos = 3600 segundos que equivale a 1 hora.
+    </p>
+    <div>
+        <input type="number" id="segundos" placeholder="digite em segundos">
+        <input type="button" value="Enviar" onclick="conversao()">
+    </div>
+
+    <div id="resposta"></div>
+
+    <script>
+
+        function conversao(){
+            let segundos = parseInt(document.getElementById('segundos').value);
+            let resposta = document.getElementById('resposta');
+            let resto = 0;
+            let hora = 0;
+            let minuto = 0;
+            let segundo = 0;
+
+           
+            resto = parseInt(segundos / 3600);  //1 hora equivale a 3600 segundos
+            if (resto > 0){
+                segundos = (segundos % 3600);
+                hora += resto;
+            } else {
+                hora += 0;
+            }
+
+            resto = parseInt(segundos / 60);  //1 hora equivale a 3600 segundos
+            if (resto > 0){
+                segundos = (segundos % 60);
+                minuto += resto;
+            } else {
+                minuto += 0;
+            }
+
+            resto = parseInt(segundos / 1);  //1 hora equivale a 3600 segundos
+            if (resto > 0){
+                segundos = (segundos % 1);
+                segundo += resto;
+                console.log(segundo);
+            } else {
+                segundo += 0;
+            }
+           
+            resposta.innerHTML = `<p>${hora}:${minuto}:${segundo}</p>`;
+
+
+
+        }
+
+
+
+
+    </script>
+</body>
+</html>

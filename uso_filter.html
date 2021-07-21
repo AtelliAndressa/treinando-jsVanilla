@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+</head>
+<body>
+    <p>
+        Filtra um array, aplica uma função (como o Map), porém retorna um valor booleano
+    </p>
+
+    <script>
+        const numeros = [2,3,6,5,10]; // array padrão pra todos, vamos filtrar e separar os multiplos de 2 em outro array
+
+        //resolvendo com For:
+        let arrayAuxiliar = [];   
+        for(let i = 0; i < numeros.length; i++){
+            for (numeros[i] % 2 === 0){
+                arrayAuxiliar.push(numeros[i]);
+            }
+        }
+        console.log(arrayAuxiliar);
+
+        //***********************************************************************
+        //Resolvendo com Filter:
+        const numerosFiltrados = numeros.filter(function(numero){
+            if (numero % 2 === 0){
+                return true;
+            } else {
+                return false;
+            }
+        })
+        console.log(numerosFiltrados);
+
+        //segundo modo: **********************************************************
+        const numerosFiltrados = numeros.filter(function(numero){
+            return numero % 2 === 0;    // é uma expressão booleana dispensando uso do if/ else
+        })
+        console.log(numerosFiltrados);
+
+        //**********************************************************************
+        //terceiro modo:    // é uma expressão booleana dispensando uso do if/ else
+        const numerosFiltrados = numeros.filter(numero => numero % 2 === 0); 
+        console.log(numerosFiltrados);
+
+    </script>
+</body>
+</html>

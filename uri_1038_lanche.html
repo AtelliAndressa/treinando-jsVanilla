@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uri 1038</title>
+</head>
+<body>
+
+    <form name="pedido">
+        <input type="number" name="codigoLanche" placeholder="Codigo Lanche" />
+        <input type="number" name="qtdLanches" placeholder="Qtde de Lanches" />
+        <input type="button" value="calcularValor" onclick="calcularValor()" />
+    </form>
+
+    <script type="text/javascript">
+
+    function calcularValor(){
+        let codigoLanche = pedido.codigoLanche.value;
+        let qtdLanches = parseInt(pedido.qtdLanches.value);
+        let valorTotal = 0;
+        const precoCachorroQuente = 4;
+        const precoXSalada = 4.5;
+        const precoXBacon = 5;
+        const precoTorrada = 2;
+        const precoRefrigerante = 1.5;
+    
+
+
+        if (qtdLanches <= 0){
+            alert ('Digite quantos lanches você quer:');
+            return false;
+        }
+
+        switch (codigoLanche){
+            case '1':
+                valorTotal = qtdLanches * precoCachorroQuente;
+                break;
+            case '2':
+                valorTotal = qtdLanches * precoXSalada;
+                break;
+            case '3':
+                valorTotal = qtdLanches * precoXBacon;
+                break;
+            case '4': 
+                valorTotal = qtdLanches * precoTorrada;
+                break;
+            case '5': 
+                valorTotal = qtdLanches * precoRefrigerante;
+                break;
+            default: 
+                valorTotal = 0;
+                break;
+        }
+
+        if (valorTotal == 0){
+            alert('Você ainda não digitou um código válido, refaça seu pedido seguindo a tabela');
+        }else {
+            alert('O valor total foi R$ ' +valorTotal);
+        }
+    }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function multiplicaPor(multiplo) {
+
+function executaMultiplicacao(numero){
+  console.log(`multiplo = ${multiplo}`);
+  return numero * multiplo;
+}
+
+return executaMultiplicacao;
+
+}
+
+let multDe5  = multiplicaPor(5);
+let multDe10 = multiplicaPor(10);
+
+console.log(multDe5);
+
+let resultadoMultDe5   = multDe5(10);
+let resultadoMultDe5_2 = multDe5(25);
+let resultadoMultDe10  = multDe10(100);
+
+console.log(resultadoMultDe5);
+console.log(resultadoMultDe5_2);
+console.log(resultadoMultDe10);
+
+    </script>
+</body>
+</html>

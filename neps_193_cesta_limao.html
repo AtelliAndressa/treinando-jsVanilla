@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Manolo quer comprar limões para fazer uma limonada. Procurando por um local para comprar os limões, ele encontrou um vendedor peculiar que vende limões da seguinte forma: O primeiro limão é vendido por CC centavos, o segundo por C-1C−1 centavos, o terceiro por C-2C−2 e assim por diante até o menor valor de 1 centavo.
+
+Por exemplo, se C = 3C=3 e Manolo quiser comprar 5 limões, o preço total será 3+2+1+1+1 = 83+2+1+1+1=8.
+
+Ajude Manolo a calcular o valor total da sua compra.
+
+Entrada
+A entrada consiste de uma linha contendo dois inteiros NN e CC, indicando que Manolo quer comprar NN limões e o preço do primeiro limão é CC.
+
+Saída
+A saída consiste de uma única linha contendo o preço total que Manolo vai pagar.
+    </p>
+
+<script>
+
+    let quantidade = 8
+    let preco = 10
+    let soma = 0;
+
+
+
+    while (quantidade >= 1){
+        console.log(preco);
+        soma += preco;
+        quantidade--;
+        
+        if(preco > 1){
+            preco--;
+        }
+    }
+    console.log(soma);
+
+</script>
+
+
+</body>
+</html>

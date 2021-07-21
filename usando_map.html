@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    <script>
+
+// Map com strings
+
+    let usuario = [
+    {primeiroNome : "Susan", ultimoNome: "Steward"},
+    {primeiroNome : "Daniel", ultimoNome: "Longbottom"},
+    {primeiroNome : "Jacob", ultimoNome: "Black"}
+    ];
+
+    let nomecompleto = usuario.map(function(elementos){
+        return `${elementos.primeiroNome} ${elementos.ultimoNome}`;
+    })
+    console.log(nomecompleto);
+
+
+// Map com numeros
+    let array = [3,4,5,6];
+    let arrayModificado = array.map(function(elementos){
+        return elementos * 3;
+    });
+    console.log(arrayModificado)
+
+
+// Map outro exemplo
+    let arr = [2,3,5,7];
+
+    arr.map(function(element, index, array){
+        console.log(element);
+        console.log(index);
+        console.log(array);
+        return element;
+    });
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cedulas</title>
+</head>
+<body>
+    <p>
+
+    </p>
+    <div>
+        <input type="number" id="saque" placeholder="valor total">
+        <input type="button" value="Enviar" onclick="calcular()">
+    </div>
+    <div id="resposta"></div>
+
+<script>
+
+    function calcular(){
+        let saque = parseInt(document.getElementById('saque').value);
+        let resposta = document.getElementById('resposta');
+        let resto = 0;
+        
+        resto = parseInt(saque / 100);  // resto recebe o numero de vezes que saque dividiu 
+        if (resto > 0){
+            saque = (saque % 100); // saque passa a ser o valor que restou da divisao
+            resposta.innerHTML += `<p>${resto} notas de R$ 100.00</p>`;
+        }
+
+        resto = parseInt(saque / 50);
+        if (resto > 0){
+            saque = (saque % 50);
+            resposta.innerHTML += `<p>${resto} notas de R$ 50.00</p>`;
+        }
+        
+        resto = parseInt(saque / 20);
+        if (resto > 0){
+            saque = (saque % 20);
+            resposta.innerHTML += `<p>${resto} notas de R$ 20.00</p>`;
+        }
+
+        resto = parseInt(saque / 10);
+        if (resto > 0){
+            saque = (saque % 10);
+            resposta.innerHTML += `<p>${resto} notas de R$ 10.00</p>`;
+        }
+
+        resto = parseInt(saque / 5);
+        if (resto > 0){
+            saque = (saque % 5);
+            resposta.innerHTML += `<p>${resto} notas de R$ 5.00</p>`;
+        }
+
+        resto = parseInt(saque / 2);
+        if (resto > 0){
+            saque = (saque % 2);
+            resposta.innerHTML += `<p>${resto} notas de R$ 2.00</p>`;
+        }
+
+        resto = parseInt(saque / 1);
+        if (resto > 0){
+            saque = (saque % 1);
+            resposta.innerHTML += `<p>${resto} notas de R$ 1.00</p>`;
+        }
+    }        
+        
+
+</script>
+</body>
+</html>

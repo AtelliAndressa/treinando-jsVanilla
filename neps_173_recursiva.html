@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+    Faça um programa para ler um inteiro NN e imprima os NN primeiros elementos da Sequência de Fibonacci (Acesse o link caso não conheça essa sequência).</p>
+    <p>A entrada consiste de uma linha contendo um inteiro NN.</p>
+    <p>A saída consiste de uma linha contendo os NN primeiros elementos da sequência.</p>
+
+   
+    
+<script>
+
+
+function fibRecursivo(n) {
+ if (n == 0) {
+ return 0
+ }
+ if (n == 1) {
+ return 1
+ }
+ return fibRecursivo(n - 1) + fibRecursivo(n - 2);
+}
+let result = 8;
+let stringRes = " ";
+for(let i = 0; i < result; i++){
+stringRes += `${fibRecursivo(i)} `;
+}
+console.log(stringRes);
+
+
+
+
+</script>
+
+</body>
+</html>

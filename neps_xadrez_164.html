@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xadrez</title>
+</head>
+<body>
+    <p>
+        No tabuleiro de xadrez, a casa na linha 1, coluna 1 (canto superior esquerdo) é sempre branca e as cores das casas se alternam entre branca e preta, de acordo com o padrão conhecido como…xadrez! Dessa forma, como o tabuleiro tradicional tem oito linhas e oito colunas, a casa na linha 8, coluna 8 (canto inferior direito) será também branca. Neste problema, entretanto, queremos saber a cor da casa no canto inferior direito de um tabuleiro com dimensões quaisquer: LL linhas e CC colunas. No exemplo da figura, para L = 6 e C = 9, a casa no canto inferior direito será preta!
+        Entrada
+A primeira linha da entrada contém um inteiro LL indicando o número de linhas do tabuleiro. A segunda linha da entrada contém um inteiro CC representando o número de colunas.
+
+Saída
+Imprima uma linha na saída. A linha deve conter um inteiro, representando a cor da casa no canto inferior direito do tabuleiro: 1, se for branca; e 0, se for preta.
+Restrição: 1 ≤ L,C ≤ 1000;
+    </p>
+
+    <script>
+        const linha = 401;
+        const coluna = 322;
+
+        //Primeira maneira de resolver:
+        if((linha % 2) == 0){
+            if ((coluna % 2) == 0){
+                console.log("branco");
+            }else {
+                console.log('Preto');
+            }
+        }else {
+            if ((coluna % 2)==0){
+                console.log('preto');
+
+            }else {
+                sonole.log('branco');
+            }
+        }
+
+        //Segunda maneira de resolver: **************
+        const linha = 401;
+        const coluna = 322;
+        if (((linha + coluna)%2) == 0){
+            console.log('Branco');
+        } else {
+            console.log('preto');
+        }
+
+        //Terceira maneira de resolver: *******************
+        resultado = (((linha +coluna)%2)==0 ? 'branco':'preto');
+        console.log(resultado);
+
+    </script>
+</body>
+</html>

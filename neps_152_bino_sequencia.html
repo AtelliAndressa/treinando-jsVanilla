@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>neps 152</title>
+</head>
+<body>
+    
+    <p>   /*Bino está tentando contar até 100000. Porém quando ele estava no número XX, ele não se lembrou dos próximos números.
+Para ajudar Bino, imprima os próximos 10 valores inteiros maiores que XX.
+
+Entrada
+A entrada consiste de uma linha contendo um inteiro XX.
+
+Saída
+A saída consiste de uma linha contendo os 10 próximos números maiores que XX separados por um espaço.*/
+</p>
+
+    <div>
+        <input type="number" id="numerox" placeholder="Digite o número" />
+        <input type="button" value="Enviar" onclick="proximos()" />
+    </div>
+
+    <div id="resp">
+    </div>
+
+
+    <script>
+
+        function proximos(){
+            let numeroxx = parseInt(document.getElementById('numerox').value);
+            let prox10 = "";
+            let indice;
+            let resp = document.getElementById('resp');
+
+            for (indice = 0; indice < 10; indice++) {
+                prox10 += (numeroxx + (indice + 1)) + " ";
+            }
+            resp.innerHTML = `${prox10}`;
+        }
+
+    </script>
+</body>
+</html>

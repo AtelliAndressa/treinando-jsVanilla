@@ -1,0 +1,32 @@
+  function aplicaDescontoOuAcrescimo(taxa,tipo = 'acrescimo'){
+		return function(valor){
+    	if(tipo === 'acrescimo'){
+      	return valor + (valor * taxa / 100);
+      }else if(tipo === 'desconto'){
+      	return valor - (valor * taxa / 100);
+      }else{
+      	return "Tipo de execução incorreto";
+      }
+    }
+}
+
+const clientesComDesconto = [{nome: "Fabio",valor: 100},{nome: "Fernanda",valor: 120}];
+
+const clientesComAcrescimo = [{nome: "Zezim",valor: 100},{nome: "Sicrano",valor: 120}];
+
+let aplicaDesconto = aplicaDescontoOuAcrescimo(10,'desconto');
+let aplicaAcrescimo = aplicaDescontoOuAcrescimo(10);
+
+//Aplica Desconto
+for(let i = 0; i < clientesComDesconto.length; i++){
+	console.log(`Cliente: ${clientesComDesconto[i].nome}`);
+  console.log(`Valor original do débito: ${clientesComDesconto[i].valor}`);
+  console.log(`Valor do débito com desconto: ${aplicaDesconto(clientesComDesconto[i].valor)}`);
+}
+
+//Aplica Acréscimo
+for(let i = 0; i < clientesComAcrescimo.length; i++){
+	console.log(`Cliente: ${clientesComAcrescimo[i].nome}`);
+  console.log(`Valor original do débito: ${clientesComAcrescimo[i].valor}`);
+  console.log(`Valor do débito com acréscimo: ${aplicaAcrescimo(clientesComAcrescimo[i].valor)}`);
+}

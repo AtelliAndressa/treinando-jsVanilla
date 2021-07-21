@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uri_1052</title>
+</head>
+
+<body>
+    <form name="mes_do_ano">
+        <input type="number" id="mes_informado" placeholder="Informe o mês do ano" />
+        <input type="button" value="informar o mês" onclick="informaMes()" />
+    </form>
+</body>
+
+</html>
+
+<script>
+    function informaMes() {
+        let mesNumero = mes_do_ano.mes_informado.value;
+
+        if (isNaN(mesNumero) || (mesNumero < 1) || (mesNumero > 12)) {
+            alert("Informe um numero válido. P.S: Entre 1 a 12");
+            return;
+        }
+        if (mesNumero == 1) {
+            alert("Janeiro");
+        } else if (mesNumero == 2) {
+            alert("Fevereiro");
+        } else if (mesNumero == 3) {
+            alert("Março");
+        } else if (mesNumero == 4) {
+            alert("Abril");
+        } else if (mesNumero == 5) {
+            alert("Maio");
+        } else if (mesNumero == 6) {
+            alert("Junho");
+        } else if (mesNumero == 7) {
+            alert("Julho");
+        } else if (mesNumero == 8) {
+            alert("Agosto");
+        } else if (mesNumero == 9) {
+            alert("Setembro");
+        } else if (mesNumero ==
+            10) {
+            alert("Outubro");
+        } else if (mesNumero == 11) {
+            alert("Novembro");
+        } else if (mesNumero == 12) {
+            alert("Dezembro");
+        }
+    }
+</script>

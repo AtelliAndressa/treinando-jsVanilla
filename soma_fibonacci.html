@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Cada novo termo na seqüência de Fibonacci é gerado adicionando os dois termos anteriores. Começando com 0 e 1, os primeiros termos serão:
+
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ( ... )
+
+Considerando os termos da sequência de Fibonacci a partir dos pares 0 e 1, cujos valores não excedam cinquenta mil, encontre a soma dos termos pares.
+    </p>
+
+<script>
+      var arrSequencia    = [0, 1]; //Define um array e seus dois primeiros elementos sequência Fibonacci
+      var sequencia       = 0;
+      var numPares        = 0;
+      var numImpares      = 0;
+      var somaPares       = 0;
+      var proximoElemento = 0;
+      do {         //Enquanto a sequencia  não for maior que 50.000 as instruções serão executadas.
+        sequencia++
+        proximoElemento = arrSequencia[sequencia] + arrSequencia[sequencia-1]; //está somando o último elemento[sequencia] ao elemento anterior [sequencia-1] do array: 0 1 1 2 3 5 8 13
+        proximoElemento < 50000 ? (   // até a soma atingir 50mil
+          arrSequencia.push(proximoElemento), // alimenta a variavel
+          proximoElemento % 2 == 0 ?   // se o resto de divisao for zero é par
+            ( numPares  ++ ,         // soma nos pares
+              somaPares += proximoElemento )  //soma os pares com o próximo que for par
+            : numImpares ++ ) //soma impares
+        : false;
+        } while  (proximoElemento < 50000);
+      document.write("Sequencia de números : " + arrSequencia.join(' / ') + "<br><br>");
+      document.write("Quantidade de números pares : " + numPares + "<br>");
+      document.write("Quantidade de números impares : " + numImpares + "<br>");
+      document.write("Somatórios dos números pares : " + somaPares)
+
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,12 @@
+const nome = "luiz otávio";
+const sobrenome = 'miranda';
+const idade = 30;
+const peso = 84;
+const altura = 1.80;
+let imc;
+imc = peso / (altura * altura);
+let anoNascimento;
+anoNascimento = 2021 - 30;
+console.log('O imc é', imc.toFixed(2));
+console.log('Meu nome é ' + nome + ' ' + sobrenome + ' tenho ' + idade + ' anos.');
+console.log('nasci no ano de ' + anoNascimento);

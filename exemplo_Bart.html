@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bart Simpson</title>
+</head>
+<body>
+    <form name="quantidade">
+        <input type="number" id="qtd_iteracoes" placeholder="Quantas vezes?" />
+        <br />
+        <input type="text" id="mensagem1" placeholder="O que o Bart deve escrever?" />
+        <br />
+        <input type="text" id="mensagem2" placeholder="O Bart vai escrever mais essa também" />
+        <br/>
+        <input type="button" value="Faça o Bart Escrever" onclick="fazBartEscrever()" />
+      </form>
+      
+      <div id="quadro_negro">
+        
+      </div>
+
+</body>
+
+<script>
+    function concatenaMensagem(msg1,msg2){
+	return msg1 + " " + msg2 + "<br />";
+}
+
+function fazBartEscrever(){
+	//equivalente a document.getElementById("qtd_iteracoes")
+	let qtdVezes = parseInt(quantidade.qtd_iteracoes.value);
+  let msgEscrever1 = quantidade.mensagem1.value;
+  let msgEscrever2 = quantidade.mensagem2.value;
+  let i;
+  let escreva = "";
+  
+  for(i = 0; i < qtdVezes; i++){
+  	escreva += concatenaMensagem(msgEscrever1,msgEscrever2);
+  }
+  
+  quadro_negro.innerHTML = escreva;
+  
+}
+</script>
+
+
+</html>

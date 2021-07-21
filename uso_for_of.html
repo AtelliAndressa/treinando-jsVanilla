@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For of</title>
+</head>
+<body>
+    <p>O loop for...of percorre objetos iterativos (incluindo Array, Map, Set, o objeto arguments e assim por diante)</p>
+<script>
+    //for normal seria:
+    let vetor = [3,5,10,2,19,21,13];
+    for(let i =0; i < vetor.length; i++){
+        console.log(vetor[i]);
+    }
+
+    //resolvendo com for of 
+    let vetor = [3,5,10,2,19,21,13];
+    for (let num of vetor){     // já armazena o elemento está no array nele, como uma copia
+        console.log(num); //3, 5,10,2,19 etc
+    }
+
+    
+
+
+
+
+</script>
+
+</body>
+</html>

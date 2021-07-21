@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="intervalos">
+        <input type="number" id="numerodigitado" name="numerodigitado" placeholder="Digite um numero entre 0 e 100" step="0,00001" />
+        <input type="button" value="Encontrar Intervalo" onclick="encontraintervalo()" />
+    </form>
+
+    <script type="text/javascript">
+
+function encontraintervalo() {
+    let numerodigitado = parseFloat(intervalos.numerodigitado.value);
+
+    if (numerodigitado < 0 || numerodigitado > 100) {
+        alert("Fora do intervalo");
+        intervalos.numerodigitado.value = 0;
+        intervalos.numerodigitado.focus();
+        return false;
+    }
+
+    if (numerodigitado >= 0 && numerodigitado <= 25) {
+        alert("Intervalo [0-25]");
+    } else if (numerodigitado > 25 && numerodigitado <= 50) {
+        alert("Intervalo (25-50]");
+    } else if (numerodigitado > 50 && numerodigitado <= 75) {
+        alert("Intervalo (50-75]");
+    } else if (numerodigitado > 75 && numerodigitado <= 100) {
+        alert("Intervalo (75-100]");
+    }
+}
+     </script>
+</body>
+
+</html>
