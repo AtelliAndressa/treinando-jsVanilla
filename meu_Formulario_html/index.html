@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body>
+
+    <h1>
+        Questões e possibilidades
+    </h1>
+    <p> Responda quais são as diferenças entre os
+        <strong>elementos 'div’ e ‘span’</strong> na construção de páginas HTML. <br/> O div é usado para agrupar elementos para fim de estilo baseado em blocos. O span é usado para agrupar elementos para fim de estilo baseado em linhas. Só deve ser utilizado
+        quando nenhum outro elemento semantico for possível.
+    </p>
+
+    <p>
+        Por que <strong>não se aconselha</strong> o uso indiscriminado de elementos ‘div’?
+        <br/> O "div" não dá nenhuma informação útil sobre a estrutura de um documento, e os robos não conseguem ainda fazer a distinção em sua leitura. Para ler o código, você precisa verificar cuidadosamente os nomes das classes, torna-se complicado
+        controlar quais tags de fechamento acompanham as tags de abertura. Uma maneira padronizada de marcar estruturas comuns em documentos da web deixaria bem mais fácil o trabalho de ler o código.
+    </p>
+    <p>
+        Explique quais seriam as <strong>alternativas</strong> para reduzir o uso destes elementos em div:
+        <br/> - O section agrupa conteudo por tema e representa uma seção. Podem ter vários por páginas;
+        <br/> - O main especifica a seção principal do conteúdo. Deve ser usado uma única vez por página;
+        <br/> - O aside representa parte de uma pagina que contem conteúdo relacionado a uma determinada seção;
+        <br/> - O article separa seções de conteudo que podem ser independentes, como postagens em blogs, jornais etc;
+        <br/> - O blockquote representa um conteudo que está sendo citado de uma fonte externa, frequentemente vem acompanhado do cite;
+        <br/> - O nav representa a seção de navegação de um documento;
+        <br/> - O footer representa o rodapé de uma seção.
+    </p>
+    <p>
+        Qual a finalidade do elemento de entrada do tipo <strong>‘hidden’</strong>? Explique.
+        <br/> A finalidade é ocultar os dados adquiridos no input, isto fica oculto ao usuário e visível apenas ao desenvolvedor.
+    </p>
+    <hr>
+    <hr>
+    <hr>
+
+    <h2>Covid-19</h2>
+    <h3>Formulário</h3>
+
+    <p>
+        Preencha seus dados corretamente:
+    </p>
+    <form action="pagina_html" method="post">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email">
+        <label for="fname">Nome:</label>
+        <input type="text" id="fname">
+        <label for="fname">Sobrenome:</label>
+        <input type="text" id="fname" name="fname">
+        <input type="hidden" id="custId" name="custId" value="3487">
+        <input type="submit" value="Submit">
+    </form>
+    <p>
+        <label for="pwd">
+              <span>Senha: </span>
+              <strong><abbr title="required">*</abbr></strong>
+        </label>
+        <input type="password" id="pwd" name="password">
+    </p>
+    <p>
+        <label for="date">
+              <span>Data de preenchimento:</span>
+              <strong><abbr title="required">*</abbr></strong>
+              <em> formato Dia/Mês/Ano</em>
+            </label>
+        <input type="date" id="date" name="expiration">
+    </p>
+
+    </form>
+    <hr>
+
+    <p> Teve contato nos ultimos 15 dias com algum possível transmissor?
+    </p>
+    <form>
+        <label for="Resposta"> Sim </label>
+        <input type="radio" id="rel1" name="Resposta" value="Covid">
+        <br/>
+        <label for="Resposta"> Não </label>
+        <input type="radio" id="nao_se_aplica" name="Resposta" value="resposta_não">
+    </form>
+
+    <hr>
+
+    <p>
+        Se a resposta for sim, está sentindo algum dos sintomas do virus? Se a resposta for não clique em não se aplica. É permitido multipla escolha:
+    </p>
+
+    <form>
+        <input type="checkbox" id="febre" name="Resposta" value="sintomas_febre">
+        <label for="Resposta "> Febre </label>
+        <br/>
+        <input type="checkbox" id="falta_ar" name="Resposta" value="sintomas_falta_ar">
+        <label for="Resposta"> Falta de ar </label>
+        <br/>
+        <input type="checkbox" id="dores" name="Resposta" value="sintomas_cansaço">
+        <label for="Resposta"> Cansaço excessivo </label>
+        <br/>
+        <input type="checkbox" id="tosse" name="Resposta" value="sintomas_tosse">
+        <label for="Resposta"> Tosse seca </label>
+        <br/>
+        <input type="checkbox" id="garganta" name="Resposta" value="sintomas_garganta">
+        <label for="Resposta"> Dor de garganta </label>
+        <p>
+            Descreva brevemente sobre seus sintomas utilizando o campo abaixo.
+        </p>
+        <div>
+            <label for="msg">Mensagem:</label>
+            <textarea id="msg"></textarea>
+        </div>
+        <div class="button">
+            <button type="submit">Clique aqui para enviar </button>
+        </div>
+    </form>
+
+    <hr>
+    <p>
+        Defina de 0 a 10 como foi sua experiência:
+    </p>
+    <form action="/action_page.php" method="get">
+        <label for="vol">Volume (between 0 and 10):</label>
+        <input type="range" id="vol" name="vol" min="0" max="10">
+        <input type="submit" value="Submit">
+    </form>
+    <hr>
+    <form>
+        <div class="button">
+            <button type="reset">Clique aqui para limpar o formulário</button>
+        </div>
+    </form>
+    <hr>
+    <div>
+        <form action="https://www.google.com/search"> Buscar no Google: <input type="text" name="q">
+            <input type="submit" value="buscar">
+        </form>
+    </div>
+    <hr>
+</body>
+
+</html>
